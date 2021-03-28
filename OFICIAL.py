@@ -12,7 +12,7 @@ def UrlToHTML():
     datos = urllib.request.urlopen(url).read().decode()
     soup = BeautifulSoup(datos).encode("utf-8")
     a=str(soup)
-    TextoURL = open("URL.txt","w")
+    TextoURL = open("HTML.txt","w")
     TextoURL.write(a)
     TextoURL.close()
     LinksBusqueda(url)

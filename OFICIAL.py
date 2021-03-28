@@ -2,6 +2,7 @@
 import urllib.request
 #Librería para leer htlm y extraer datos de ello
 import sys
+import codecs
 from bs4 import BeautifulSoup
 #Librería para buscar
 import re
@@ -9,10 +10,10 @@ import re
 def UrlToHTML():
     url=input("Ingresa URL: ")
     datos = urllib.request.urlopen(url).read().decode()
-    soup = BeautifulSoup(datos)
+    soup = BeautifulSoup(datos).encode("utf-8")
     a=str(soup)
     TextoURL = open("URL.txt","w")
-    TextoURL.write(a + "\n")
+    TextoURL.write(a)
     TextoURL.close()
     LinksBusqueda(url)
 

@@ -1,8 +1,6 @@
 #Librería para leer página en html
 import urllib.request
 #Librería para leer htlm y extraer datos de ello
-import sys
-import codecs
 from bs4 import BeautifulSoup
 #Librería para buscar
 import re
